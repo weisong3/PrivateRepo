@@ -8,5 +8,7 @@
     <dimen name="shadow_width">15dp</dimen>
 
     <integer name="num_cols">1</integer>
-
+    
+    <!-- for login -->
+	<dimen name="login_margin">15dp</dimen>
 </resources>

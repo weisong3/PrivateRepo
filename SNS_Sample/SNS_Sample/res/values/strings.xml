@@ -4,5 +4,12 @@
     <string name="app_name">SNS_Sample</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-
+    <string name="login_username">USERNAME:</string>
+    <string name="loging_password">PASSWORD:</string>
+    <string name="login_submit">SIGN IN</string>
+    <string name="login_register">REGISTER</string>
+	<string name="login_title">WELCOME</string>
+    <string name="main_greeting_1">Hello, </string>
+	<string name="main_greeting_2">! What do you want to do today?</string>
+	
 </resources>
