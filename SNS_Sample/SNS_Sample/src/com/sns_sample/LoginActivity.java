@@ -7,6 +7,9 @@ import android.text.Editable;
 import com.sns_sample.dialog.LoginDialogFactory;
 import com.sns_sample.dialog.LoginDialogHandler;
 import com.sns_sample.dialog.LoginDialogResult;
+import com.sns_sample.dialog.RegisterDialogFactory;
+import com.sns_sample.dialog.RegisterDialogHandler;
+import com.sns_sample.dialog.RegisterDialogResult;
 
 public class LoginActivity extends FragmentActivity {
 
@@ -15,20 +18,40 @@ public class LoginActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         
-        LoginDialogHandler handler = new LoginDialogFactory().createDialogHandler(this, "login fragment", new LoginDialogResult() {
+        showLoginDialog();
+    }
+
+	private void showLoginDialog() {
+		 LoginDialogHandler handler = new LoginDialogFactory().createDialogHandler(this, "login fragment", new LoginDialogResult() {
+				
+				@Override
+				public void onSignIn(int id, Editable username, Editable password) {
+					MainActivity.startActivity(username.toString(), LoginActivity.this);
+				}
+				
+				@Override
+				public void onRegister(int id) {
+					showRegisterDialog();
+				}
+			});
+	        LoginDialogFactory.showDialog(handler, getResources().getString(R.string.login_title), null, "", 0);
+	}
+
+	protected void showRegisterDialog() {
+		RegisterDialogHandler regHandler = new RegisterDialogFactory().createDialogHandler(this, "register fragment", new RegisterDialogResult() {
 			
 			@Override
-			public void onSignIn(int id, Editable username, Editable password) {
-				MainActivity.startActivity(username.toString(), LoginActivity.this);
+			public void onRegister(int id, Editable username, Editable password,
+					Editable repassword) {
+				showLoginDialog();
 			}
 			
 			@Override
-			public void onRegister(int id) {
-				// TODO Auto-generated method stub
-				
+			public void onCancell(int id) {
+				showLoginDialog();
 			}
 		});
-        LoginDialogFactory.showDialog(handler, getResources().getString(R.string.login_title), null, "", 0);
-    }
+		RegisterDialogFactory.showDialog(regHandler, getResources().getString(R.string.login_register), null, "", 0);
+	}
 
 }

@@ -15,7 +15,7 @@
             android:id="@+id/login_username_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/login_username"
+            android:text="@string/username"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <EditText
@@ -38,7 +38,7 @@
             android:id="@+id/login_password_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/loging_password"
+            android:text="@string/password"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <EditText

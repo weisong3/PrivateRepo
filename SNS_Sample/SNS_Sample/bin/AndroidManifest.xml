@@ -25,7 +25,38 @@
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/SampleTheme.Light" >
+        </activity>
+         <activity
+            android:name=".AppointmentActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/SampleTheme.Light" >
+        </activity>
+        <activity
+            android:name=".InviteActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/SampleTheme.Light" >
+        </activity>
+        <activity
+            android:name=".ManageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/SampleTheme.Light" >
+        </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/SampleTheme.Light" >
+        </activity>
+        <activity
+            android:name=".WorkActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/SampleTheme.Light" >
         </activity>
     </application>
 
